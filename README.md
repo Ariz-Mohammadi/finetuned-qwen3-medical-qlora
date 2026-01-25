@@ -80,8 +80,6 @@ CUDA_VISIBLE_DEVICES=1 python inference.py
 ├── evaluate_expanded_18cases.py      # Custom evaluation
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # This file
-├── medical_finetuning_report.tex    # LaTeX report
-├── medical_presentation.tex          # LaTeX presentation slides
 ├── qwen3_8b_quantized/              # Quantized base model (NOT in repo - too large)
 └── qwen3_medical_reasoning_qlora/   # Fine-tuned adapter (may be included if small)
 ```
