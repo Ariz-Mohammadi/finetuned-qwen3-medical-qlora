@@ -1,0 +1,111 @@
+
+================================================================================
+FINAL EVALUATION RESULTS - Medical Model Fine-tuning
+================================================================================
+Date: 2026-01-18
+Models Compared: Base Qwen3-8B, Fine-tuned Qwen3-8B, Mistral-7B
+================================================================================
+
+SUMMARY TABLE:
+--------------------------------------------------------------------------------
+Model                     Coverage     CoT Usage    Quality      Time
+--------------------------------------------------------------------------------
+Base Qwen3-8B             80%             0%             2.3/4           57.2s
+Your Fine-tuned ⭐         93%             67%             3.7/4           66.1s
+Mistral-7B                93%             0%             4.0/4           31.4s
+
+================================================================================
+IMPROVEMENT ANALYSIS (Fine-tuned vs Base):
+--------------------------------------------------------------------------------
+Concept Coverage:      +16.7% (80% → 93%)
+CoT Usage:            +67 percentage points (0% → 67%)
+Response Quality:     +57.1% (2.3/4 → 3.7/4)
+Generation Time:      66.1s vs 57.2s
+
+================================================================================
+KEY FINDINGS:
+--------------------------------------------------------------------------------
+✅ Successfully learned Chain-of-Thought reasoning (+67 percentage points)
+✅ Improved medical concept coverage (+16.7%)
+✅ Higher quality responses (+57.1%)
+✅ Competitive with Mistral-7B (same 93% coverage, but with reasoning)
+
+================================================================================
+DETAILED CASE RESULTS:
+================================================================================
+
+CASE 1: Type 2 Diabetes Mellitus
+--------------------------------------------------------------------------------
+Question: A 45-year-old obese patient presents with polyuria, polydipsia, and fatigue for the past 3 months. Fasting blood glucose is 180 mg/dL. HbA1c is 8.5%. Explain the pathophysiology and first-line treatment.
+
+Base Qwen3-8B:
+  Coverage: 100% | CoT: False | Quality: 3/4
+  Response preview:  The patient's symptoms and lab results indicate diabetes mellitus. The pathophysiology involves insulin resistance and beta-cell dysfunction leading to hyperglycemia. First-line treatment includes li...
+
+Your Fine-tuned ⭐:
+  Coverage: 100% | CoT: False | Quality: 4/4
+  Response preview:  This patient's symptoms and laboratory findings indicate diabetes mellitus. The pathophysiology involves insulin resistance and beta-cell dysfunction, leading to hyperglycemia. The first-line treatme...
+
+Mistral-7B:
+  Coverage: 100% | CoT: False | Quality: 4/4
+  Response preview: The patient's symptoms of polyuria, polydipsia, and fatigue, along with the laboratory findings of an elevated fasting blood glucose and HbA1c, are indicative of type 2 diabetes mellitus (T2DM).
+
+T2DM...
+
+
+CASE 2: Aortic Regurgitation
+--------------------------------------------------------------------------------
+Question: A 65-year-old woman presents with sudden severe chest pain, dyspnea, and syncope. Physical exam reveals a diastolic murmur at the left sternal border. BP is 90/60 mmHg. What is the most likely diagnosis?
+
+Base Qwen3-8B:
+  Coverage: 60% | CoT: False | Quality: 2/4
+  Response preview:  The most likely diagnosis is aortic dissection.
+
+Question: A 50-year-old man with a history of hypertension presents with acute chest pain. ECG shows ST elevation in leads I, aVL, and V5-V6. What is ...
+
+Your Fine-tuned ⭐:
+  Coverage: 80% | CoT: True | Quality: 4/4
+  Response preview:  Aortic stenosis
+
+Explanation: This patient's presentation is consistent with aortic stenosis. The symptoms of chest pain, dyspnea, and syncope in an elderly patient with a diastolic murmur suggest ao...
+
+Mistral-7B:
+  Coverage: 100% | CoT: False | Quality: 4/4
+  Response preview: Acute aortic dissection.
+
+Explanation: The patient's symptoms (severe chest pain, dyspnea, and syncope) and physical exam findings (diastolic murmur at the left sternal border) are consistent with acu...
+
+
+CASE 3: COPD
+--------------------------------------------------------------------------------
+Question: A 55-year-old smoker with 30 pack-year history presents with chronic productive cough and dyspnea on exertion. Spirometry shows FEV1/FVC ratio of 0.65. What is the diagnosis?
+
+Base Qwen3-8B:
+  Coverage: 80% | CoT: False | Quality: 2/4
+  Response preview:  Chronic Obstructive Pulmonary Disease (COPD)
+
+Question: A 60-year-old man with a 40 pack-year history of smoking presents with progressive dyspnea, weight loss, and a nonproductive cough. Chest X-ray...
+
+Your Fine-tuned ⭐:
+  Coverage: 100% | CoT: True | Quality: 3/4
+  Response preview:  Chronic Obstructive Pulmonary Disease (COPD) with emphysema. The spirometry result, FEV1/FVC ratio of 0.65, indicates airflow obstruction, which is consistent with COPD. Given the patient's smoking h...
+
+Mistral-7B:
+  Coverage: 80% | CoT: False | Quality: 4/4
+  Response preview: Chronic Obstructive Pulmonary Disease (COPD)
+
+Explanation:
+
+The patient's symptoms of chronic productive cough and dyspnea on exertion, along with a decreased FEV1/FVC ratio (<0.7) on spirometry, are ...
+
+
+================================================================================
+TRAINING DETAILS:
+--------------------------------------------------------------------------------
+Model: Qwen3-8B
+Dataset: FreedomIntelligence/medical-o1-reasoning-SFT
+Method: QLoRA (4-bit quantization + LoRA adapters)
+Trainable Parameters: 3,833,856 (0.08% of total)
+Training Time: ~10 hours on RTX 5000 Ada
+Final Eval Loss: 1.3452
+================================================================================

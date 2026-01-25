@@ -1,0 +1,24 @@
+Q-1=Cardiology case
+
+A 65-year-old woman with a history of hypertension presents with sudden severe chest pain, dyspnea, and syncope. Physical exam reveals a diastolic murmur best heard at the left sternal border. Blood pressure is 90/60 mmHg. ECG shows left ventricular hypertrophy. What is the most likely diagnosis and what is the underlying pathophysiology?
+
+
+Q-2= Endocrinology Case
+
+A 45-year-old obese patient presents with polyuria, polydipsia, and fatigue for the past 3 months. Fasting blood glucose is 180 mg/dL. HbA1c is 8.5%. Explain the pathophysiology of this condition and describe the first-line treatment approach.
+
+Q-3= Neurology case
+
+A 70-year-old male presents with progressive memory loss, difficulty with language, and confusion over the past year. MRI shows cortical atrophy and enlarged ventricles. What is the most likely diagnosis? Explain the underlying neurodegenerative process step by step.
+
+Q-4=Respiratory Case
+
+A 28-year-old patient presents with high fever, severe headache, neck stiffness, and photophobia. Lumbar puncture shows elevated WBC count with neutrophil predominance and low glucose in CSF. What is the most likely diagnosis and what is the causative mechanism?
+
+Q-5=Infectious Disease Case
+
+A 28-year-old patient presents with high fever, severe headache, neck stiffness, and photophobia. Lumbar puncture shows elevated WBC count with neutrophil predominance and low glucose in CSF. What is the most likely diagnosis and what is the causative mechanism?
+
+Q-6=Neurology case
+
+A 60-year-old diabetic patient presents with progressive lower extremity edema, fatigue, and foamy urine. Lab results show proteinuria (3+ on dipstick), serum albumin 2.5 g/dL, and elevated cholesterol. What is the diagnosis and explain the underlying kidney pathology?

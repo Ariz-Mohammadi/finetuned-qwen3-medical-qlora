@@ -1,0 +1,263 @@
+nohup: ignoring input
+2026-01-19 23:12:19.151399: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-01-19 23:12:19.151551: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-01-19 23:12:19.152648: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-01-19 23:12:19.159337: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-19 23:12:19.980326: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+🏥 Expanded Custom Medical Evaluation
+Balanced evaluation: 3 cases per specialty
+
+
+================================================================================
+EXPANDED CUSTOM MEDICAL EVALUATION
+================================================================================
+Test cases: 18 (3 cases × 6 specialties)
+================================================================================
+
+================================================================================
+Evaluating: Base Qwen3-8B
+================================================================================
+
+Loading Base Qwen3-8B...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:03<00:13,  3.31s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.91s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:08,  4.07s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:15<00:03,  3.84s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:15<00:00,  2.55s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:15<00:00,  3.13s/it]
+'(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: 2dc19c14-0c78-4c7b-8e08-872ec3c6218f)')' thrown while requesting HEAD https://huggingface.co/Qwen/Qwen3-8B/resolve/main/config.json
+Retrying in 1s [Retry 1/5].
+✅ Base model loaded
+
+[1/18] Endocrinology: Type 2 Diabetes Mellitus
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 61.2s
+
+[2/18] Endocrinology: Hyperthyroidism
+  Coverage: 75% | CoT: False | Quality: 3/4 | Time: 60.7s
+
+[3/18] Endocrinology: Prolactinoma
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 60.8s
+
+[4/18] Cardiology: Aortic Regurgitation
+  Coverage: 80% | CoT: False | Quality: 3/4 | Time: 60.8s
+
+[5/18] Cardiology: Inferior STEMI
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 60.2s
+
+[6/18] Cardiology: Congestive Heart Failure
+  Coverage: 75% | CoT: False | Quality: 4/4 | Time: 60.9s
+
+[7/18] Pulmonology: COPD
+  Coverage: 75% | CoT: False | Quality: 2/4 | Time: 60.8s
+
+[8/18] Pulmonology: Pulmonary Embolism
+  Coverage: 50% | CoT: False | Quality: 3/4 | Time: 60.9s
+
+[9/18] Pulmonology: Acute Asthma Exacerbation
+  Coverage: 100% | CoT: True | Quality: 2/4 | Time: 61.0s
+
+[10/18] Gastroenterology: Peptic Ulcer Disease
+  Coverage: 75% | CoT: False | Quality: 3/4 | Time: 61.2s
+
+[11/18] Gastroenterology: Pancreatic Cancer
+  Coverage: 25% | CoT: False | Quality: 2/4 | Time: 60.7s
+
+[12/18] Gastroenterology: Acute Pancreatitis
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 60.9s
+
+[13/18] Neurology: Ischemic Stroke
+  Coverage: 75% | CoT: False | Quality: 3/4 | Time: 60.9s
+
+[14/18] Neurology: Migraine
+  Coverage: 50% | CoT: False | Quality: 3/4 | Time: 61.0s
+
+[15/18] Neurology: Parkinson's Disease
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 61.1s
+
+[16/18] Infectious Disease: Tuberculosis
+  Coverage: 50% | CoT: False | Quality: 3/4 | Time: 61.1s
+
+[17/18] Infectious Disease: Bacterial Meningitis (Neisseria meningitidis)
+  Coverage: 75% | CoT: True | Quality: 3/4 | Time: 61.0s
+
+[18/18] Infectious Disease: Pneumocystis Pneumonia (PCP)
+  Coverage: 50% | CoT: False | Quality: 4/4 | Time: 60.9s
+
+================================================================================
+Evaluating: Fine-tuned Qwen3-8B
+================================================================================
+
+Loading Fine-tuned Qwen3-8B...
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:03<00:12,  3.23s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.91s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:08,  4.11s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:15<00:03,  3.89s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:15<00:00,  2.58s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:15<00:00,  3.16s/it]
+'(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')), '(Request ID: a0c8bbc9-cc64-4921-8703-d31db30527a7)')' thrown while requesting HEAD https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3/resolve/main/tokenizer_config.json
+Retrying in 1s [Retry 1/5].
+✅ Fine-tuned model loaded
+
+[1/18] Endocrinology: Type 2 Diabetes Mellitus
+  Coverage: 50% | CoT: True | Quality: 4/4 | Time: 55.4s
+
+[2/18] Endocrinology: Hyperthyroidism
+  Coverage: 75% | CoT: True | Quality: 3/4 | Time: 46.5s
+
+[3/18] Endocrinology: Prolactinoma
+  Coverage: 100% | CoT: True | Quality: 4/4 | Time: 52.5s
+
+[4/18] Cardiology: Aortic Regurgitation
+  Coverage: 80% | CoT: True | Quality: 3/4 | Time: 45.3s
+
+[5/18] Cardiology: Inferior STEMI
+  Coverage: 75% | CoT: True | Quality: 3/4 | Time: 57.8s
+
+[6/18] Cardiology: Congestive Heart Failure
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 46.7s
+
+[7/18] Pulmonology: COPD
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 38.6s
+
+[8/18] Pulmonology: Pulmonary Embolism
+  Coverage: 75% | CoT: True | Quality: 4/4 | Time: 61.2s
+
+[9/18] Pulmonology: Acute Asthma Exacerbation
+  Coverage: 100% | CoT: True | Quality: 4/4 | Time: 62.1s
+
+[10/18] Gastroenterology: Peptic Ulcer Disease
+  Coverage: 100% | CoT: True | Quality: 4/4 | Time: 67.4s
+
+[11/18] Gastroenterology: Pancreatic Cancer
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 44.1s
+
+[12/18] Gastroenterology: Acute Pancreatitis
+  Coverage: 100% | CoT: True | Quality: 2/4 | Time: 57.5s
+
+[13/18] Neurology: Ischemic Stroke
+  Coverage: 100% | CoT: True | Quality: 4/4 | Time: 57.6s
+
+[14/18] Neurology: Migraine
+  Coverage: 75% | CoT: True | Quality: 2/4 | Time: 51.5s
+
+[15/18] Neurology: Parkinson's Disease
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 49.3s
+
+[16/18] Infectious Disease: Tuberculosis
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 53.2s
+
+[17/18] Infectious Disease: Bacterial Meningitis (Neisseria meningitidis)
+  Coverage: 75% | CoT: True | Quality: 3/4 | Time: 37.8s
+
+[18/18] Infectious Disease: Pneumocystis Pneumonia (PCP)
+  Coverage: 100% | CoT: True | Quality: 3/4 | Time: 57.1s
+
+================================================================================
+Evaluating: Mistral-7B-Instruct
+================================================================================
+
+Loading Mistral-7B...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.90s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:10<00:05,  5.10s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:14<00:00,  4.88s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:14<00:00,  4.92s/it]
+✅ Mistral model loaded
+
+[1/18] Endocrinology: Type 2 Diabetes Mellitus
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 24.9s
+
+[2/18] Endocrinology: Hyperthyroidism
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 31.5s
+
+[3/18] Endocrinology: Prolactinoma
+  Coverage: 100% | CoT: False | Quality: 1/4 | Time: 12.2s
+
+[4/18] Cardiology: Aortic Regurgitation
+  Coverage: 80% | CoT: False | Quality: 2/4 | Time: 48.1s
+
+[5/18] Cardiology: Inferior STEMI
+  Coverage: 50% | CoT: False | Quality: 2/4 | Time: 47.8s
+
+[6/18] Cardiology: Congestive Heart Failure
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 19.8s
+
+[7/18] Pulmonology: COPD
+  Coverage: 100% | CoT: False | Quality: 2/4 | Time: 11.3s
+
+[8/18] Pulmonology: Pulmonary Embolism
+  Coverage: 75% | CoT: False | Quality: 3/4 | Time: 48.3s
+
+[9/18] Pulmonology: Acute Asthma Exacerbation
+  Coverage: 100% | CoT: False | Quality: 1/4 | Time: 6.9s
+
+[10/18] Gastroenterology: Peptic Ulcer Disease
+  Coverage: 100% | CoT: False | Quality: 4/4 | Time: 28.0s
+
+[11/18] Gastroenterology: Pancreatic Cancer
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 15.0s
+
+[12/18] Gastroenterology: Acute Pancreatitis
+  Coverage: 75% | CoT: False | Quality: 1/4 | Time: 8.5s
+
+[13/18] Neurology: Ischemic Stroke
+  Coverage: 100% | CoT: False | Quality: 2/4 | Time: 18.6s
+
+[14/18] Neurology: Migraine
+  Coverage: 75% | CoT: False | Quality: 3/4 | Time: 23.3s
+
+[15/18] Neurology: Parkinson's Disease
+  Coverage: 100% | CoT: False | Quality: 2/4 | Time: 7.6s
+
+[16/18] Infectious Disease: Tuberculosis
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 48.1s
+
+[17/18] Infectious Disease: Bacterial Meningitis (Neisseria meningitidis)
+  Coverage: 100% | CoT: False | Quality: 2/4 | Time: 21.2s
+
+[18/18] Infectious Disease: Pneumocystis Pneumonia (PCP)
+  Coverage: 100% | CoT: False | Quality: 3/4 | Time: 20.5s
+
+================================================================================
+RESULTS BY SPECIALTY
+================================================================================
+
+Cardiology:
+  Base Qwen3-8B             Coverage: 85%, CoT: 0/3
+  Fine-tuned Qwen3-8B       Coverage: 85%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 77%, CoT: 0/3
+
+Endocrinology:
+  Base Qwen3-8B             Coverage: 92%, CoT: 0/3
+  Fine-tuned Qwen3-8B       Coverage: 75%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 100%, CoT: 0/3
+
+Gastroenterology:
+  Base Qwen3-8B             Coverage: 67%, CoT: 0/3
+  Fine-tuned Qwen3-8B       Coverage: 100%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 92%, CoT: 0/3
+
+Infectious Disease:
+  Base Qwen3-8B             Coverage: 58%, CoT: 1/3
+  Fine-tuned Qwen3-8B       Coverage: 92%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 100%, CoT: 0/3
+
+Neurology:
+  Base Qwen3-8B             Coverage: 75%, CoT: 0/3
+  Fine-tuned Qwen3-8B       Coverage: 92%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 92%, CoT: 0/3
+
+Pulmonology:
+  Base Qwen3-8B             Coverage: 75%, CoT: 1/3
+  Fine-tuned Qwen3-8B       Coverage: 92%, CoT: 3/3
+  Mistral-7B-Instruct       Coverage: 92%, CoT: 0/3
+
+================================================================================
+OVERALL SUMMARY (18 Cases Across 6 Specialties)
+================================================================================
+Model                     Coverage     CoT %        Quality      Time        
+--------------------------------------------------------------------------------
+Base Qwen3-8B             75%          11%          3.1/4        60.9s       
+Fine-tuned Qwen3-8B ⭐     89%          100%         3.2/4        52.3s       
+Mistral-7B-Instruct       92%          0%           2.5/4        24.5s       
+
+================================================================================
+IMPROVEMENT ANALYSIS (Fine-tuned vs Base)
+================================================================================
+Concept Coverage:      +18.5%
+CoT Usage:            +89 percentage points
+Response Quality:     +3.6%
+================================================================================
+
+✅ Results saved to: ./evaluation_results/expanded_evaluation_18cases_20260119_235435.json
+
+✅ Evaluation complete!

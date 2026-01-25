@@ -1,0 +1,101 @@
+# ============================================
+# Medical Reasoning Project - .gitignore
+# ============================================
+
+# Large model files (DO NOT COMMIT - too big for GitHub!)
+*.bin
+*.safetensors
+*.h5
+*.onnx
+*.pt
+*.pth
+*.msgpack
+*.index
+*.ckpt
+
+# Quantized model directory (4-16GB)
+qwen3_8b_quantized/
+*/qwen3_8b_quantized/
+
+# Fine-tuned adapter directory (keep only if < 100MB)
+# If adapter is small (15MB), you can comment this out to keep it
+qwen3_medical_reasoning_qlora/checkpoint-*/
+qwen3_medical_reasoning_qlora/*.safetensors
+qwen3_medical_reasoning_qlora/*.bin
+
+# Training checkpoints (large)
+checkpoint-*/
+checkpoints/
+*.checkpoint
+
+# Cache directories
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+*.so
+.Python
+
+# Hugging Face cache
+.huggingface/
+
+# Dataset cache (if you downloaded datasets)
+datasets/
+data/raw/
+data/cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+conda_env/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (optional - you might want to keep small logs)
+# Uncomment if logs are too large
+# *.log
+# logs/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Large output files
+*.pptx
+*.pdf
+*.pkl
+*.pickle
+
+# Tensorboard logs (can be large)
+runs/
+tensorboard/
+
+# Keep these small files:
+!requirements.txt
+!README.md
+!*.py
+!*.md
+!*.tex
+!*.json
+!*.yaml
+!*.yml
+!.gitignore
+=*
