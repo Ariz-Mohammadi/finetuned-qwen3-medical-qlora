@@ -60,7 +60,7 @@ python train_qwen_qlora.py
 ### Inference
 ```bash
 # Run inference with fine-tuned model
-python inference.py
+python inference_qwen3.py
 
 # For interactive mode, just run and follow prompts
 ```
