@@ -68,15 +68,15 @@ python inference.py
 ### Using Specific GPU
 ```bash
 # If GPU 0 is busy, use GPU 1
-CUDA_VISIBLE_DEVICES=1 python train_qwen_qlora.py
-CUDA_VISIBLE_DEVICES=1 python inference.py
+CUDA_VISIBLE_DEVICES=1 python train_qwen3_qlora.py
+CUDA_VISIBLE_DEVICES=1 python inference_qwen3.py
 ```
 
 ## 📁 Project Structure
 ```
 .
-├── train_qwen_qlora.py              # Training script
-├── inference.py                      # Inference script
+├── train_qwen3_qlora.py              # Training script
+├── inference_qwen3.py                      # Inference script
 ├── evaluate_expanded_18cases.py      # Custom evaluation
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # This file
